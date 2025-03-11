@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms & Conditions - Mahadev Fantasy Sport</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hamburger-menu {
+            width: 24px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: white;
+            border-radius: 9px;
+            transition: 0.25s ease-in-out;
+        }
+
+        .hamburger-menu span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 8px;
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            top: 16px;
+        }
+
+        .hamburger-menu.open span:nth-child(1) {
+            top: 8px;
+            transform: rotate(45deg);
+        }
+
+        .hamburger-menu.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.open span:nth-child(3) {
+            top: 8px;
+            transform: rotate(-45deg);
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            mobileMenu.classList.toggle('hidden');
+            hamburger.classList.toggle('open');
+        }
+    </script>
+</head>
+
+<body class="text-white bg-[#121212]">
+    <!-- NAVBAR -->
+    <nav class="bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-bold text-yellow-400">
+                        Mahadev Fantasy Sport
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="privacy.html"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Privacy Policy</a>
+                        <a href="terms.html"
+                            class="text-white px-3 py-2 rounded-md text-sm font-medium">Terms & Conditions</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMenu()"
+                        class="text-gray-300 hover:text-white focus:outline-none focus:text-white">
+                        <div class="hamburger-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="privacy.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Privacy
+                        Policy</a>
+                    <a href="terms.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Terms &
+                        Conditions</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Terms & Conditions Content -->
+    <div class="mx-auto">
+        <div class="bg-gradient-to-b from-gray-800 to-gray-700 py-10 h-auto">
+            <h1 class="text-4xl font-bold text-center mb-8">Terms & Conditions</h1>
+            <p class="text-gray-300 text-center mb-12">Please read these terms carefully before using our services</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto space-y-8 my-10">
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">Acceptance of Terms</h2>
+                <p class="text-gray-300">By accessing and using Mahadev Fantasy Sport, you accept and agree to be bound by the
+                    terms and provision of this agreement. If you do not agree to abide by these terms, please do not use our
+                    service.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">Eligibility</h2>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>You must be at least 18 years old to use our services</li>
+                    <li>You must be a resident of regions where fantasy sports are legal</li>
+                    <li>You must provide accurate and complete registration information</li>
+                    <li>You are responsible for maintaining the confidentiality of your account</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">User Conduct</h2>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>No fraudulent or unlawful behavior</li>
+                    <li>No multiple accounts or sharing of accounts</li>
+                    <li>No use of automated systems or bots</li>
+                    <li>No interference with service operation</li>
+                    <li>Respect for other users and staff</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">Payment Terms</h2>
+                <p class="text-gray-300">All transactions are final and non-refundable unless otherwise specified. We reserve
+                    the right to modify our fees and payment policies at any time. Users are responsible for all applicable
+                    taxes and charges.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">Termination</h2>
+                <p class="text-gray-300">We reserve the right to:</p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>Suspend or terminate accounts for violations</li>
+                    <li>Modify or discontinue services without notice</li>
+                    <li>Block access from certain locations</li>
+                    <li>Take legal action when necessary</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 px-4 text-center text-gray-500 text-sm">
+        <div class="mb-2 space-x-2">
+            <a href="index.html" class="hover:text-white">Home</a> |
+            <a href="#" class="hover:text-white">About Us</a> |
+            <a href="privacy.html" class="hover:text-white">Privacy Policy</a> |
+            <a href="terms.html" class="hover:text-white">Terms & Conditions</a> |
+            <a href="#" class="hover:text-white">Contact Us</a>
+        </div>
+        <p class="text-gray-400">
+            &copy; 2025 Mahadev Fantasy Sport. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>

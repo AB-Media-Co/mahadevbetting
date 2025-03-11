@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahadev Fantasy Sport</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hamburger-menu {
+      width: 24px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .hamburger-menu span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: white;
+      border-radius: 9px;
+      transition: 0.25s ease-in-out;
+    }
+
+    .hamburger-menu span:nth-child(1) {
+      top: 0px;
+    }
+
+    .hamburger-menu span:nth-child(2) {
+      top: 8px;
+    }
+
+    .hamburger-menu span:nth-child(3) {
+      top: 16px;
+    }
+
+    .hamburger-menu.open span:nth-child(1) {
+      top: 8px;
+      transform: rotate(45deg);
+    }
+
+    .hamburger-menu.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-menu.open span:nth-child(3) {
+      top: 8px;
+      transform: rotate(-45deg);
+    }
+  </style>
+  <script>
+    // Toggle the mobile menu
+    function toggleMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburger = document.querySelector('.hamburger-menu');
+      mobileMenu.classList.toggle('hidden');
+      hamburger.classList.toggle('open');
+    }
+
+    // Age Verification Modal Logic
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('age-verification-modal');
+      const yesBtn = document.getElementById('yes-btn');
+      const noBtn = document.getElementById('no-btn');
+
+      yesBtn.addEventListener('click', function () {
+        // Hide the modal if the user is 18+
+        modal.style.display = 'none';
+      });
+
+      noBtn.addEventListener('click', function () {
+        // Show a message and redirect if the user is not 18+
+        alert("You must be over 18 to access this page.");
+        window.location.href = "https://www.google.com"; // Change redirection as needed
+      });
+    });
+  </script>
+</head>
+
+<body class="text-white">
+  <!-- Age Verification Modal -->
+  <div id="age-verification-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+    <div class="bg-white text-black p-8 rounded shadow-lg text-center">
+      <h2 class="text-2xl font-bold mb-4">Are you 18+?</h2>
+      <div class="flex justify-center space-x-4">
+        <button id="yes-btn" class="px-4 py-2 bg-green-500 text-white rounded">Yes</button>
+        <button id="no-btn" class="px-4 py-2 bg-red-500 text-white rounded">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo / Brand Name -->
+        <div class="flex-shrink-0">
+          <a href="#" class="text-xl font-bold text-yellow-400">
+            Mahadev Fantasy Sport
+          </a>
+        </div>
+        <!-- Nav Links -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="privacy.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Privacy Policy</a>
+            <a href="terms.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Terms &amp; Conditions</a>
+          </div>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button type="button" onclick="toggleMenu()"
+            class="text-gray-300 hover:text-white focus:outline-none focus:text-white">
+            <div class="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+          <a href="privacy.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Privacy Policy</a>
+          <a href="terms.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <div class="bg-gradient-to-b from-gray-800 to-gray-700 h-screen">
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center justify-center text-center h-full">
+      <div class="text-yellow-400 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 21h6m2-10a2 2 0 002-2V5a2 2 0 00-2-2h-1a2 2 0 00-2 2v4h-2V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2h10z" />
+        </svg>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold mb-2">Mahadev Fantasy Sport</h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">
+        Play, Compete, and Win Real Rewards!
+      </p>
+      <!-- Phone number input & button -->
+      <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full max-w-md">
+        <input type="text" placeholder="Enter your phone number"
+          class="w-full sm:w-auto flex-grow px-4 py-2 rounded-md focus:outline-none text-gray-800" />
+        <button
+          class="bg-yellow-400 text-black px-6 py-2 rounded-md font-semibold hover:bg-yellow-300 transition-colors">
+          Get App Link
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- FEATURES SECTION -->
+  <section class="bg-[#121212]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">
+          Welcome to Mahadev Fantasy Sport
+        </h2>
+        <p class="text-gray-300">
+          The ultimate fantasy cricket platform for enthusiasts in India.
+          Create your dream team, join contests, and win exciting rewards
+          &amp; a 100% legal and skill-based experience!
+        </p>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1: Fast Performance -->
+        <div class="bg-[#1E1E1E] rounded-lg p-6 text-center">
+          <!-- Icon -->
+          <div class="flex justify-center mb-4">
+            <!-- Rocket Icon -->
+            <svg class="w-10 h-10 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.59 14.37A5.5 5.5 0 1119 9c-.36.05-.72.1-1.08.16A17.35 17.35 0 0114.37 3.4c.06-.36.11-.72.16-1.08A5.5 5.5 0 1110 5a17.35 17.35 0 01-4.56 3.29c-.36-.05-.72-.1-1.08-.16a5.5 5.5 0 111 3.16c.06-.36.11-.72.16-1.08A17.35 17.35 0 0110 9c.46.16.9.34 1.34.52A17.35 17.35 0 0115 14c.18.44.36.88.52 1.34z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.59 18.37c.58.18 1.16.34 1.73.48a2 2 0 01-2.46 2.46c.14-.57.3-1.15.48-1.73z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Fast Performance</h3>
+          <p class="text-gray-300">
+            Lightning fast load times and real-time updates to keep you ahead in the game.
+          </p>
+        </div>
+
+        <!-- Card 2: Secure & Legal -->
+        <div class="bg-[#1E1E1E] rounded-lg p-6 text-center">
+          <!-- Icon -->
+          <div class="flex justify-center mb-4">
+            <!-- Shield Check Icon -->
+            <svg class="w-10 h-10 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 22c4.97 0 9-4.03 9-9V7.74a1.99 1.99 0 00-1.08-1.78l-6.07-3.03a2 2 0 00-1.7 0L5.08 5.96A1.99 1.99 0 004 7.74V13c0 4.97 4.03 9 9 9z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Secure & Legal</h3>
+          <p class="text-gray-300">
+            A completely transparent and legally compliant platform, ensuring fairness and security.
+          </p>
+        </div>
+
+        <!-- Card 3: Real-Time Analytics -->
+        <div class="bg-[#1E1E1E] rounded-lg p-6 text-center">
+          <!-- Icon -->
+          <div class="flex justify-center mb-4">
+            <!-- Chart Bar Icon -->
+            <svg class="w-10 h-10 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 13V5m-5 13V10m-5 8v-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Real-Time Analytics</h3>
+          <p class="text-gray-300">
+            Stay updated with live match scores and player stats to make strategic decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#212529]">
+    <!-- Container -->
+    <div class="max-w-2xl mx-auto py-8 px-4 text-center">
+      <!-- Heading -->
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+        Join Thousands of Fantasy Cricket Players!
+      </h2>
+      <!-- Subtitle -->
+      <p class="text-gray-300 mb-6">
+        Enter your mobile number to receive the app download link via SMS.
+      </p>
+
+      <!-- Phone Input & Button -->
+      <div class="flex flex-col sm:flex-row items-center justify-center">
+        <!-- Input Field -->
+        <input type="tel" placeholder="Enter Phone Number"
+          class="w-full sm:w-auto sm:flex-1 px-4 py-2 mb-2 sm:mb-0 sm:mr-2 rounded border border-gray-600 bg-[#1E1E1E] text-white focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+        <!-- Button -->
+        <button
+          class="px-4 py-2 rounded bg-yellow-500 text-black font-semibold hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          Get SMS Link
+        </button>
+      </div>
+
+      <!-- Privacy Note -->
+      <p class="text-gray-500 text-sm mt-2">
+        <span class="mr-1" role="img" aria-label="Lock icon">🔒</span>
+        Your privacy is important — we never share your details.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-8 bg-[#121212] py-8 px-4 text-center text-gray-500 text-sm">
+      <!-- Footer Links -->
+      <div class="mb-2 space-x-2">
+        <a href="#" class="hover:text-white">Home</a> |
+        <a href="#" class="hover:text-white">About Us</a> |
+        <a href="#" class="hover:text-white">Compliance</a> |
+        <a href="#" class="hover:text-white">Privacy Policy</a> |
+        <a href="#" class="hover:text-white">Terms &amp; Conditions</a> |
+        <a href="#" class="hover:text-white">Contact Us</a> |
+        <a href="#" class="hover:text-white">Responsible Gaming</a> |
+        <a href="#" class="hover:text-white">How to Play</a> |
+        <a href="#" class="hover:text-white">FAQ</a> |
+        <a href="#" class="hover:text-white">Download</a>
+      </div>
+
+      <!-- Disclaimer -->
+      <p class="text-gray-400 mb-2">
+        Mahadev Fantasy Sport is a skill-based game | 18+ Only | Geo-Restrictions Apply
+      </p>
+
+      <!-- Copyright -->
+      <p class="text-gray-400">
+        &copy; 2025 Mahadev Fantasy Sport. All rights reserved.
+      </p>
+    </footer>
+  </section>
+</body>
+
+</html>

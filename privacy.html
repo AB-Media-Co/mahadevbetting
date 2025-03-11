@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy - Mahadev Fantasy Sport</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hamburger-menu {
+            width: 24px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: white;
+            border-radius: 9px;
+            transition: 0.25s ease-in-out;
+        }
+
+        .hamburger-menu span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 8px;
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            top: 16px;
+        }
+
+        .hamburger-menu.open span:nth-child(1) {
+            top: 8px;
+            transform: rotate(45deg);
+        }
+
+        .hamburger-menu.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.open span:nth-child(3) {
+            top: 8px;
+            transform: rotate(-45deg);
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            mobileMenu.classList.toggle('hidden');
+            hamburger.classList.toggle('open');
+        }
+    </script>
+</head>
+
+<body class="text-white bg-[#121212]">
+    <!-- NAVBAR (Same as main page) -->
+    <nav class="bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-bold text-yellow-400">
+                        Mahadev Fantasy Sport
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="privacy.html"
+                            class="test-gray-300 text-white px-3 py-2 rounded-md text-sm font-medium">Privacy Policy</a>
+                        <a href="terms.html"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Terms &
+                            Conditions</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMenu()"
+                        class="text-gray-300 hover:text-white focus:outline-none focus:text-white">
+                        <div class="hamburger-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="privacy.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Privacy
+                        Policy</a>
+                    <a href="terms.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Terms &
+                        Conditions</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Privacy Policy Content -->
+    <div class=" mx-auto">
+        <div class="bg-gradient-to-b from-gray-800 to-gray-700 py-10 h-auto">
+            <h1 class="text-4xl font-bold text-center mb-8">Privacy Policy</h1>
+            <p class="text-gray-300 text-center mb-12">Your privacy is our priority</p>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto space-y-8 my-10">
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">Introduction</h2>
+                <p class="text-gray-300">Welcome to Mahadev Fantasy Sport. Your privacy is of utmost importance to us.
+                    This Privacy Policy outlines how we collect, use, store, and protect your personal information when
+                    you use our platform. By using our website and services, you agree to the collection and use of
+                    information in accordance with this policy.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">Information We Collect</h2>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>Personal identification information (Name, email address, phone number)</li>
+                    <li>Account information and preferences</li>
+                    <li>Transaction and payment details</li>
+                    <li>Device information and usage statistics</li>
+                    <li>Communication records with our support team</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">How We Use Your Information</h2>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>To provide and maintain our service</li>
+                    <li>To notify you about changes to our service</li>
+                    <li>To provide customer support</li>
+                    <li>To process transactions</li>
+                    <li>To comply with legal obligations</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">Data Security</h2>
+                <p class="text-gray-300">We implement appropriate security measures to protect your personal
+                    information. However, no method of transmission over the Internet is 100% secure, and we cannot
+                    guarantee absolute security.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">Your Rights</h2>
+                <p class="text-gray-300">You have the right to:</p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>Access your personal data</li>
+                    <li>Correct inaccurate data</li>
+                    <li>Request deletion of your data</li>
+                    <li>Object to data processing</li>
+                    <li>Data portability</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 px-4 text-center text-gray-500 text-sm">
+        <div class="mb-2 space-x-2">
+            <a href="index.html" class="hover:text-white">Home</a> |
+            <a href="#" class="hover:text-white">About Us</a> |
+            <a href="#" class="hover:text-white">Privacy Policy</a> |
+            <a href="#" class="hover:text-white">Terms & Conditions</a> |
+            <a href="#" class="hover:text-white">Contact Us</a>
+        </div>
+        <p class="text-gray-400">
+            &copy; 2025 Mahadev Fantasy Sport. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
